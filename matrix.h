@@ -1,5 +1,8 @@
-#ifndef MOD_H
-#define MOD_H
+#pragma once
+
+#include "vector.h"
+
+
 
 class Matrix : public Vector {
 
@@ -17,5 +20,3 @@ protected:
     Vector* rows;
 
 };
-
-#endif

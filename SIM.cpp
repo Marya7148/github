@@ -8,14 +8,13 @@ using namespace std;
 int alpha = 0.01;
 
 int main () {
-    double values1[3] = {2, -1, 0};
-    double values2[3] = {-1, 2, -1};
-    double values3[3] = {0, -1, 2};
+    double values1[3] {2, -1, 0};
+    double values2[3] {-1, 2, -1};
+    double values3[3] {0, -1, 2};
     Vector rows1(3, values1);
     Vector rows2(3, values2);
     Vector rows3(3, values3);
-    Vector rows_[3] = {rows1, rows2, rows3};
-    Vector rows(3, rows_);
+    Vector rows[3] = {rows1, rows2, rows3};
     Matrix A(3, 3, rows);
 
     double values[3] = {1, -1, 2};
@@ -24,7 +23,7 @@ int main () {
 
     Vector x(3), y(3);
 
-    for(int n = 0, n < 10, n++) {
+    for(int n = 0; n < 10; n++) {
         y = A.mult_vector(x);
         y = y.sum(b);
         y = y.mult_number(alpha);

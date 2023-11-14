@@ -1,5 +1,4 @@
-#ifndef MOD_H
-#define MOD_H
+#pragma once
 
 class Vector {
 
@@ -21,5 +20,3 @@ protected:
     double* values;
 
 };
-
-#endif
